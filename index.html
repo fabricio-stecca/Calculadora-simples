@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <main>
+        <section id="corpo">
+        
+                <p id="res"></p>
+                <section id="button">
+        
+                    <div id="zero" onclick="insert('0')">0</div>
+                    <div id="um" onclick="insert('1')">1</div>
+                    <div id="dois" onclick="insert('2')">2</div>
+                    <div id="tres" onclick="insert('3')">3</div>
+                    <div id="quatro" onclick="insert('4')">4</div>
+                    <div id="cinco" onclick="insert('5')">5</div>
+                    <div id="seis" onclick="insert('6')">6</div>
+                    <div id="sete" onclick="insert('7')">7</div>
+                    <div id="oito" onclick="insert('8')">8</div>
+                    <div id="nove" onclick="insert('9')">9</div>
+                    <div id="mais" onclick="insert('+')">+</div>
+                    <div id="menos" onclick="insert('-')">-</div>
+                    <div id="divisao" onclick="insert('/')">/</div>
+                    <div id="multiplicaçao" onclick="insert('*')">x</div>
+                    <div id="virgula" onclick="insert('.')">,</div>
+                    <div id="igual" onclick="calcular()">=</div>
+                    <div id="apagar" onclick="back()">></div>
+                    <div id="CE" onclick="clean()">CE</div>
+        
+        
+                </section>
+        
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

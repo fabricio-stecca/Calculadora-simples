@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "idroid";
+    src: url(fontes/idroid.otf)
+} 
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+     background-color: rgb(146, 146, 180);
+     height: 100vh;
+     font-family: Arial, Helvetica, sans-serif;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+h1 {
+    margin: 58px 1px 30px 1px;
+    padding: 1px 1px 1px 1px;
+    border-bottom: 1px solid black;
+    font-family: "idroid";
+    text-align: center;
+}
+
+main {height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#corpo {
+
+    height: 426px;
+    width: 328px;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.459);
+
+}
+
+section#button {
+    display: grid;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-areas: 
+    "um dois tres CE apagar"
+    "quatro cinco seis divisao multiplicaçao"
+    "sete oito nove menos mais"
+    "zero zero virgula igual mais";
+}
+
+section#corpo > p {
+    height: 100px;
+    width: 300px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: aliceblue;
+}
+
+div {
+    display: block;
+    background-color: rgb(204, 194, 194);
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div:hover {
+    background-color: black;
+    color: white;
+}
+
+div#zero {
+    grid-area: zero;
+}
+
+div#um {
+    grid-area: um;
+}
+
+div#dois {
+    grid-area: dois;
+}
+
+div#tres {
+    grid-area: tres;
+}
+
+div#quatro {
+    grid-area: quatro;
+}
+
+div#cinco {
+    grid-area: cinco;
+}
+
+div#seis {
+    grid-area: seis;
+}
+
+div#sete {
+    grid-area: sete;
+}
+
+div#oito {
+    grid-area: oito;
+}
+
+div#nove {
+    grid-area: nove;
+}
+
+div#mais {
+    grid-area: mais;
+}
+
+div#menos {
+    grid-area: menos;
+}
+
+div#divisao {
+    grid-area: divisao;
+}
+
+div#multiplicaçao {
+    grid-area: multiplicaçao;
+}
+
+div#virgula {
+    grid-area: virgula;
+}
+
+div#igual {
+    grid-area: igual;
+}
+
+div#apagar {
+    grid-area: apagar;
+}
+
+div#CE {
+    grid-area: CE;
+}
+
+
+
+
+  
