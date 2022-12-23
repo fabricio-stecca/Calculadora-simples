@@ -1,3 +1,5 @@
+/*
+
 let zero = document.getElementById(`zero`)
 let um = document.getElementById(`um`)
 let dois = document.getElementById(`dois`)
@@ -8,6 +10,8 @@ let seis = document.getElementById(`seis`)
 let sete = document.getElementById(`sete`)
 let oito = document.getElementById(`oito`)
 let nove = document.getElementById(`nove`)
+
+*/
 
 function insert(num) {
 
@@ -29,7 +33,7 @@ function calcular() {
     var res = document.getElementById(`res`).innerHTML
 
     if(res) {
-        var res = document.getElementById(`res`).innerHTML = eval(res)
+        document.getElementById(`res`).innerHTML = eval(res)
     } else {
         
     }
