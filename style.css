@@ -68,6 +68,7 @@ section#corpo > p {
     border-radius: 5px;
     border: 2px solid black;
     background-color: aliceblue;
+    overflow-wrap: break-word;
 }
 
 div {
