@@ -54,9 +54,9 @@ section#button {
     row-gap: 5px;
     column-gap: 5px;
     grid-template-areas: 
-    "um dois tres CE apagar"
+    "sete oito nove CE apagar"
     "quatro cinco seis divisao multiplicaçao"
-    "sete oito nove menos mais"
+    "um dois tres menos mais"
     "zero zero virgula igual mais";
 }
 
