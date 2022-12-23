@@ -9,6 +9,9 @@ let sete = document.getElementById(`sete`)
 let oito = document.getElementById(`oito`)
 let nove = document.getElementById(`nove`)
 
+let res = document.getElementById(`res`)
+
+
 
 function insert(num) {
 
