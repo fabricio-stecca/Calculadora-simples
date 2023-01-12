@@ -60,6 +60,7 @@ section#button {
 }
 
 section#corpo > p {
+    text-align: right;
     height: 100px;
     width: 300px;
     padding: 20px;
