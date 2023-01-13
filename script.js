@@ -5,11 +5,41 @@ function insert(num) {
     let res = document.getElementById(`res`)
     let ultimoSlot = res.innerHTML[res.innerHTML.length-1]
 
-    if(res.innerHTML == `` && num == `*` || res.innerHTML == `` && num == `/` || res.innerHTML == `+` && num == `*` || res.innerHTML == `+` && num == `/` || res.innerHTML == `-` && num == `*` || res.innerHTML == `-` && num == `/`) {
-        return
-    } else
     
-    if(ultimoSlot == `+` && num == `+` || ultimoSlot == `+` && num == `-` || ultimoSlot == `+` && num == `*` || ultimoSlot == `+` && num == `/`) {
+    //Condição para inserção de vírgulas
+
+    if(ultimoSlot == `+` && num == `.` || ultimoSlot == `+` && num == `.` || ultimoSlot == `+` && num == `.` || ultimoSlot == `+` && num == `.`) {
+
+        res.innerHTML += `0${num}`
+
+    } else if(ultimoSlot == `-` && num == `.` || ultimoSlot == `-` && num == `.` || ultimoSlot == `-` && num == `.` || ultimoSlot == `-` && num == `.`)  {
+
+        res.innerHTML += `0${num}`
+
+    } else if(ultimoSlot == `*` && num == `.` || ultimoSlot == `*` && num == `.` || ultimoSlot == `*` && num == `.` || ultimoSlot == `*` && num == `.`)  {
+
+        res.innerHTML += `0${num}`
+
+    } else if(ultimoSlot == `/` && num == `.` || ultimoSlot == `/` && num == `.` || ultimoSlot == `/` && num == `.` || ultimoSlot == `/` && num == `.`)  {
+
+        res.innerHTML += `0${num}`
+
+    } else if(ultimoSlot == `.` && num == `.` || ultimoSlot == `.` && num == `+` || ultimoSlot == `.` && num == `-` || ultimoSlot == `.` && num == `*` || ultimoSlot == `.` && num == `/`)  {
+
+        return
+
+    } else if (res.innerHTML == `` && num == `.`) {
+
+        res.innerHTML += `0${num}`
+    }
+
+    //Condição da inserção das operações
+    
+    else if(res.innerHTML == `` && num == `*` || res.innerHTML == `` && num == `/` || res.innerHTML == `+` && num == `*` || res.innerHTML == `+` && num == `/` || res.innerHTML == `-` && num == `*` || res.innerHTML == `-` && num == `/`) {
+        
+        return
+
+    } else if(ultimoSlot == `+` && num == `+` || ultimoSlot == `+` && num == `-` || ultimoSlot == `+` && num == `*` || ultimoSlot == `+` && num == `/`) {
         back()
         res.innerHTML += num
         
@@ -25,7 +55,11 @@ function insert(num) {
         back()
         res.innerHTML += num
         
-    } else {
+    } 
+
+    // Inserção normal dos números
+    
+    else {
 
        res.innerHTML += num
 
@@ -44,11 +78,24 @@ function back() {
 }
 
 function calcular() {
-    var res = document.getElementById(`res`).innerHTML
+    let res = document.getElementById(`res`).innerHTML
+    let ultimoSlot = res[res.length-1]
 
-    if(res) {
-        document.getElementById(`res`).innerHTML = eval(res)
-    } else {
-        
+    if(res == ``) {
+        return
+
+    } else if (res == `.` || res == `+` || res == `-`) {
+
+       back()
+
+    } else if (ultimoSlot == `.` || ultimoSlot == `+` || ultimoSlot == `-` || ultimoSlot == `*` || ultimoSlot == `/`) {
+
+        back()
+        document.getElementById(`res`).innerHTML = eval(document.getElementById(`res`).innerHTML)
+    }  else {
+    
+    document.getElementById(`res`).innerHTML = eval(res)
+
     }
+  
 }
